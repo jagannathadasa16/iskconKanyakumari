@@ -1,0 +1,13 @@
+<button mat-raised-button routerLink="/navigation" [color]="brown">◄◄◄ home page</button>
+<!-- <div > -->
+<full-calendar class="calender-body" [options]="calendarOptions"></full-calendar>
+<!-- </div> -->
+<!-- <div class="container">
+    <p>Special Day is <button (click)="openEvent(eventDate)">{{eventDate.title}}</button> </p>
+    <div><p>Today is  {{getDay}}</p></div>
+</div> -->
+<app-event-details [eventOnDetails]= 'eventObj'></app-event-details>
+
+  
+<app-footer></app-footer>
+<router-outlet></router-outlet>

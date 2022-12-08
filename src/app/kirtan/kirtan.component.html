@@ -1,0 +1,21 @@
+<div>
+    <div *ngFor="let kirtan of kirtans" fxLayout="column" fxLayoutGap="5px">
+      <button class="play_button" mat-raised-button [color]="kirtan.id==1?'primary':'accent'" (click) ="openKirtan(kirtan.url)">{{kirtan.name}}</button>
+    </div>
+    <div>
+      <span>{{currentTime}}</span>
+      <input type="range" min="0" max="{{duration}}" [value]="seek" (input)="setSeekto($event)">
+      <span>{{duration}}</span>
+    </div>
+    <div>
+      <span>Volume</span>
+      <input type="range" min="0" max="1" step="0.01" value="0.5" (input)="setVolume($event)">
+    </div>
+    <div class="playpausebuttons">
+     <button><mat-icon class="playPause" (click)="play()">play_circle</mat-icon></button>
+     <button><mat-icon class="playPause" (click)="pause()">pause_circle</mat-icon></button>
+     <button><mat-icon class="playPause" (click)="stop()">stop_circle</mat-icon></button>
+    </div>
+  </div>
+  <app-footer></app-footer>
+  <button mat-raised-button routerLink="/navigation" color="accent">Click here to go the home page</button>

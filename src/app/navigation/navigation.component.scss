@@ -1,3 +1,92 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
+.example-icon, .login-container{
+  display: flex;
+  justify-content: space-around;
+}
+.nav-bar{
+  box-shadow: 0px 10px 10px 3px #ddd8d8;
+}
+.container-max{
+  background-image: url("../../assets/images/background.jpg");
+}
+.left-content{
+  padding: 8px;
+  background-color: #c56f1e;
+  border-radius: 44px;
+  margin:2px 0px;
+  border: 2px solid white;
+}
+.left-content:hover{
+  background-color: #4a1ec5;
+  font-size: 22px;
+  padding: 12px;
+}
+.marq{
+  background-color: white;
+  color: rgb(66, 20, 20);
+  font-weight: 900;
+  font-size: 22px;
+  box-shadow: 0px 0px 8px 1px #d7b47e;
+  padding-top: 8px;
+}
+.image-class{
+  color: white;
+  background-color: none;
+  border: none;
+  border-radius: 32px;
+  outline: none;
+  box-shadow: 0 0 6px rgb(184, 179, 179);
+  padding: 0px !important;
+  box-shadow: 0px 0px 8px 1px #d7b47e;
+  width: 100px;
+  border-radius: 32px;
+  margin-bottom: 32px;
+}
+.image-class:hover{
+  box-shadow: 0px 0px 16px 1px #d7b47e;
+}
+
+.content-navigators{
+  justify-content: space-around;
+}
+::ng-deep .mat-toolbar.mat-primary {
+  background: #6f0404;
+  color: #fff;
+}
+@media  (min-width: 280px) and (max-width: 420px){
+  .image-class{
+    width: 25vw;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+}
+@media  (min-width: 421px) and (max-width: 719px){
+  .image-class{
+    width: 25vw;
+    border-radius: 24px;
+    margin-bottom: 24px;
+  }
+}
+@media  (min-width: 720px) and (max-width: 1020px){
+  .image-class{
+    width: 20vw;
+    border-radius: 20px;
+  }
+  .content-navigators{
+    justify-content: space-around;
+  }
+}
+@media  (min-width: 1021px) and (max-width: 1420px){
+  .image-class{
+    width: 25vw;
+   
+  }
+}
+@media (min-width:1420px) {
+  .content-navigators{
+    justify-content: space-around;
+  }
+}

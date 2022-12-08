@@ -1,13 +1,79 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<div class="nav-bar">
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between">
+    <button mat-icon-button [matMenuTriggerFor]="animals" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Iskcon Kanyakumari</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
+    <div fxLayout fxLayoutAlign="center center">Iskcon Kanyakumari</div>
+    
+    
+  <div class="example-icon">
+    <button mat-icon-button (click)="openDialog()">
+      Sign In
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
+  </div>
   </mat-toolbar>
+</div>
+<mat-menu #animals="matMenu">
+  <button mat-menu-item>Srila Prabhupada</button>
+  <button mat-menu-item >Lord Krishna</button>
+  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Books</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Articles</button>
+  <button mat-menu-item>Kirtans</button>
+  <button mat-menu-item>Festivals</button>
+  <button mat-menu-item>Important Days</button>
+  <button mat-menu-item>Bhakti Rules</button>
+</mat-menu>
+<mat-menu #vertebrates="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="fish">Srimath Bhagavat Gita</button>
+  <button mat-menu-item [matMenuTriggerFor]="amphibians">Srimath Bhagavathm</button>
+  <button mat-menu-item [matMenuTriggerFor]="reptiles">Caitanya Charitamritam</button>
+  <button mat-menu-item *ngFor="let book of books">{{book}}</button>
+</mat-menu>
+
+<mat-menu #invertebrates="matMenu">
+  <button mat-menu-item *ngFor="let article of articles">{{article}}</button>
+</mat-menu>
+<mat-menu #fish="matMenu" >
+  <button mat-menu-item *ngFor="let Chapter of array">{{Chapter}}</button>
+</mat-menu>
+
+<mat-menu #amphibians="matMenu">
+  <button mat-menu-item *ngFor="let canto of cantos">{{canto}}</button>
+  
+</mat-menu>
+
+<mat-menu #reptiles="matMenu">
+  <button mat-menu-item>Adi Lila</button>
+  <button mat-menu-item>Madhya Lila</button>
+  <button mat-menu-item>Anthya Lila</button>
+</mat-menu>
+
+
+
+<div class="container-max">
+  <div class="row">
+    <img src="/assets/images/radakrishna.jpg" alt="">
+    <marquee behavior="scrolling" direction="left" class="marq">
+     <p> Hare Krishna Hare Krishna Krishna Krishna Hare Hare Hare Rama Hare Rama Rama Rama Hare Hare -  ஹரே கிருஷ்ண ஹரே கிருஷ்ண கிருஷ்ண கிருஷ்ண ஹரே ஹரே ஹரே ராம ஹரே ராம ராம ராம ஹரே ஹரே</p>
+    </marquee>
+    <div class=" coloum-title">
+      <div class="content-navigators mt-3" fxLayout="row wrap" fxLayoutAlign.lt-sm="space-around" fxLayoutGap="10px">
+      <a class="content-buttons" matRipple color="warn" matTooltip="About Srila Prabhupada" routerLink="/srilaPrabhupada"><img src="assets/images/aboutPrabhupada.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Chant with Srila Prabhupada" routerLink="/japa"><img src="assets/images/chantWithPrabhupada.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Mritanga Lessons"><img src="assets/images/mritangalesson.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Karatal Lessons"><img src="assets/images/karathalPrabhupada.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Arathi Songs"><img src="assets/images/aratiSong.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Festivals"><img src="assets/images/festival.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Kirtan Mp3" routerLink="/kirtan"><img src="assets/images/kirtans.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Devotee forum"><img src="assets/images/forum.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Goudiya Vaishnava Calender" routerLink="/calender"><img src="assets/images/calender.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="How to cook for Lord Krishna"><img src="assets/images/cooks.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Srila Prabhupada Books on krishna consciousness"><img src="assets/images/books.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Slokas pronunciation practice"><img src="assets/images/slokas.png" class="image-class" alt=""></a>
+      <a class="content-buttons" matRipple color="warn" matTooltip="Donate for development"><img src="assets/images/donate.png" class="image-class" alt=""></a>
+      </div>
+    </div>
+   
+</div>
+</div>
+<app-footer></app-footer>

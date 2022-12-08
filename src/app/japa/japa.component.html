@@ -1,0 +1,40 @@
+<div class="body">
+    <div class="mahaMantra"><p> ஹரே கிருஷ்ண ஹரே கிருஷ்ண </p> <p>கிருஷ்ண கிருஷ்ண ஹரே ஹரே </p> <p>ஹரே ராம ஹரே ராம </p> <p>ராம ராம ஹரே ஹரே</p></div>
+    <div class="malaCount mt-2" fxLayout.lt-sm="row" fxLayoutGap.lt-sm="5px">
+        <div><img src="assets/images/prabhupada-chanting.jpg" class="prabhupadaImg" alt=""></div>
+        <div>
+        <p class="malaTitle">16 மாலைகள் </p> 
+        <p class="malaCoutArea">{{sixteenMalaCount}}</p>
+        <button mat-raised-button color="warn" (click)="reset64Count()">முதலிலிருந்து 16<br>மாலை</button>
+        </div>
+        <div><img src="assets/images/radahkrsihna.png" class="lordRadhaKrishna" alt=""></div>
+    </div>
+    <div fxLayout="row" class="mt-3">
+    
+        <div class="malaCount SideLine">
+            <p class="malaTitle">மாலை எண்ணிக்கை</p> 
+            <p class="malaCoutArea">{{malaCounting}}</p>
+            <button mat-raised-button color="warn" (click)="reset16Count()">முதலிலிருந்து <br>மாலை</button>
+        </div>
+    
+        <div class="malaCount">
+         <p class="malaTitle">மணி  எண்ணிக்கை</p>
+         <p class="malaCoutArea">{{beatCounting}}</p>
+         <button mat-raised-button color="warn" (click)="resetIncreaseCount()">முதலிலிருந்து <br>மணி</button>
+        </div>
+    </div>
+    <div fxLayoutAlign.lt-sm="center center" fxLayout="column">
+        <p class="japa-indicate"> கீழே உள்ள பட்டனை கிளிக் செய்து உங்களுடைய ஜபத்தை  ஆரம்பிக்கவும்  </p>
+        <button mat-fab color="accent" class="chant-count" (click)="increaseCount()"><span>{{beatCounting}}</span></button>
+    </div>
+    </div>
+    <div fxLayoutAlign.lt-xl="center">
+        <button class="play_button" mat-raised-button color="accent" (click) ="openKirtan()">பிரபுபாதருடன் ஜபம் செய்ய <br>
+            இங்கே கிளிக் செய்யவும் 
+            </button>
+    </div>
+    <app-footer></app-footer>
+    <div class="mt-5 d-flex justify-content-center">
+        <button mat-raised-button routerLink="/navigation">◄◄◄ Back to Home Page</button>
+
+    </div>

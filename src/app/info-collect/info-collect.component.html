@@ -1,0 +1,45 @@
+
+<div class="sign-in">
+    <div class="d-flex justify-content-between">
+        <h2>Add your Basic Information</h2>
+        <a href="" mat-dialog-close> <mat-icon><span class="material-symbols-rounded">close </span></mat-icon> </a>
+        </div>
+        <form action="" [formGroup]="basicInfoForm">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input formControlName="firstName" matInput placeholder="Give your first Name">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Email Id</mat-label>
+              <input formControlName="emailId" matInput placeholder="Give your Email Id">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Mobile Number</mat-label>
+              <input formControlName="mobile" matInput placeholder="Give your Mobile">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label> Tell something about you</mat-label>
+              <input formControlName="about" matInput placeholder="Tell something about you">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+        </form>
+        <mat-dialog-actions align="end">
+            <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+            <button mat-raised-button color="primary" (click)="saveForm()"> Submit</button>
+        </mat-dialog-actions>
+</div>

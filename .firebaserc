@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "kanyakumari-iskcon"
+  },
+  "targets": {
+    "kanyakumari-iskcon": {
+      "hosting": {
+        "iskconkanyakumari": [
+          "kanyakumari-iskcon"
+        ]
+      }
+    }
+  }
+}
